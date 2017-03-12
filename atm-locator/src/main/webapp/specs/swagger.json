@@ -1,0 +1,80 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "ING ATM Locator",
+        "description": "#### ATM Locator is an internet portal that acts as an interface to actual locations of ATM belonging to ING bank.\n"
+    },
+    "schemes": [
+        "http"
+    ],
+    "host": "localhost:8080",
+    "basePath": "/atm-locator",
+    "paths": {
+        "/login": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "Sign in POST request"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "formData",
+                        "description": "User name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "description": "Password",
+                        "type": "string"
+                    },
+                    {
+                        "name": "_csrf",
+                        "in": "formData",
+                        "description": "Token",
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/atm/raw": {
+            "parameters": [
+                {
+                    "name": "city",
+                    "in": "query",
+                    "description": "City",
+                    "type": "string",
+                    "required": false
+                }
+            ],
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Search nearest ING ATM by city."
+                    }
+                }
+            }
+        },
+        "/atm/search": {
+            "parameters": [
+                {
+                    "name": "city",
+                    "in": "query",
+                    "description": "City",
+                    "type": "string",
+                    "required": false
+                }
+            ],
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Search nearest ING ATM by city"
+                    }
+                }
+            }
+        }
+    }
+}
