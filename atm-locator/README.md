@@ -17,17 +17,17 @@ The command should build war **atm-locator.war** in target folder
 
 ### Deployment 
 
-In Tomcat env. it enough if you copy and paste **war** to **webapps** folder in Tomcat. 
-When you start Tomcat, the **war** will be automatically deploy with context root atm-locator
+In Tomcat env. it is enough to copy and paste **war** to **webapps** folder into Tomcat. 
+When you start Tomcat, the **war** will be automatically deployed with context root atm-locator
 
 ### Technology stack
 
-JDK 1.8
-Spring 4.3.8
-Spring Security 4.3.2
-Servlet 3.0
-JQuery 1.12.4
-Maven 3.0
+* JDK 1.8
+* Spring 4.3.8
+* Spring Security 4.3.2
+* Servlet 3.0
+* JQuery 1.12.4
+* Maven 3.0
 
 ## Use cases
 
@@ -42,14 +42,14 @@ Maven 3.0
 There are two groups of users: ADMIN and USER
 
 ADMIN:
-   user:     admin
-   password: admin
+   * user:     admin
+   * password: admin
    
 USER: 
-   user:     petra
-   password: petra
+   * user:     petra
+   * password: petra
    
-Accounts from group USER has no rights to perform any requests.
+Accounts from the group USER has no rights to perform any requests.
 
 ### Usage
 If the application was deployed successfully, give a try and open http://localhost:8080/atm-locator/ 
