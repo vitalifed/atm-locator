@@ -2,7 +2,7 @@
 swagger: '2.0'
 info:
   version: 1.0.0
-  title: ING ATM Locator 
+  title: ATM Locator 
   description: |
     #### ATM Locator is an internet portal that acts as an interface to actual locations of ATM belonging to ING bank.
 
@@ -13,9 +13,11 @@ basePath: /atm-locator
 paths:
   /login:
     post:
+      tags:
+        - Sign in    
       responses:
         200:
-          description: Sign in POST request
+          description: Sign in via POST request
       parameters:
         - name: username
           in: formData
@@ -29,26 +31,40 @@ paths:
           in: formData
           description: Token
           type: string
-  /atm/raw:
+  /atm/{bank}/raw:
     parameters:
+      - name: bank
+        in: path
+        description: Bank
+        type: string
+        required: true
       - name: city
         in: query
         description: City
         type: string
         required: false
     get:
+      tags:
+        - Raw    
       responses:
         200:
-          description: Search nearest ING ATM by city.
-  /atm/search:
+          description: Search nearest ING ATM by city. The response is in JSON original format
+  /atm/{bank}/search:
     parameters:
+      - name: bank
+        in: path
+        description: Bank
+        type: string
+        required: true
       - name: city
         in: query
         description: City
         type: string
         required: false
     get:
+      tags:
+        - Simple    
       responses:
         200:
-          description: Search nearest ING ATM by city
+          description: Search nearest ING ATM by city. The response is in JSON simplified format. It only contains number of values - street, post code, city 
           

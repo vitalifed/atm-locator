@@ -12,13 +12,13 @@
 var table;
 $(document).ready(function() {
     table = $('#atm').DataTable( {
-        "ajax": "atm/search"
+        "ajax": "atm/ING/search"
     } );
     
 } );
 
 function _click(){
-	table.ajax.url( 'atm/search?city=' + $("#city").val()).load();
+	table.ajax.url( 'atm/ING/search?city=' + $("#city").val()).load();
 }
 
 </script>
