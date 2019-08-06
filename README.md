@@ -63,7 +63,7 @@ Where to find specification src/main/webapp/specs [http://localhost:8080/atm-loc
 
 ## Swagger UI
 
-{% embed url="http://localhost:8080/atm-locator/swagger-ui/" %}
+http://localhost:8080/atm-locator/swagger-ui/
 
 
 
