@@ -67,5 +67,3 @@ http://localhost:8080/atm-locator/swagger-ui/
 
 
 
-
-
