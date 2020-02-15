@@ -6,7 +6,7 @@
 
 	<groupId>com.backbase.assignment.solution</groupId>
 	<artifactId>atm-locator</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.2-SNAPSHOT</version>
 	<name>ATM Locator Sample</name>
 
 	<properties>
@@ -99,3 +99,5 @@
 		</plugins>
 	</build>
 </project>
+
+
